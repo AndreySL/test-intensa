@@ -39,7 +39,7 @@ CREATE TABLE `links` (
 --
 
 INSERT INTO `links` (`id`, `link`, `code`, `timestamp`) VALUES
-(1, 'vk.com', 'abcde', '2023-05-31 17:30:01');
+-- (1, 'vk.com', 'abcde', '2023-05-31 17:30:01');
 
 --
 -- Индексы сохранённых таблиц

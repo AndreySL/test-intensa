@@ -15,7 +15,6 @@ if (isset($_POST['url'])) {
     } else {
         $_SESSION['error'] = 'Некорректная ссылка';
     }
-
 }
 
 header("Location: ../index.php");
