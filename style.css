@@ -1,8 +1,95 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
 }
-h1 {
-    color: red;
+
+body {
+  background-color: #87b5b5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: #c0d8d8;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+  width: fit-content;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid black;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: 5px;
+}
+
+.url_input {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 5px;
+}
+
+.submit_input {
+  border-radius: 6px;
+  padding: 3px;
+  background-color: #4aa3a3;
+  border: none;
+}
+
+.short_link {
+  margin-top: 25px;
+}
+
+.sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.url_input:focus {
+  background-color: white;
+  outline: none;
+}
+
+.submit_input:hover {
+  cursor: pointer;
+}
+
+.copy_link {
+  cursor: pointer;
+}
+
+.copyBtn {
+  background-color: inherit;
+  border: none;
+}
+
+.copyBtn:hover {
+  cursor: pointer;
+}
+
+.copyBtn:focus {
+  outline: none;
+}
+
+.copy_link:active {
+  color: #4aa3a3;
+}
+
+a:link,
+a:visited {
+  color: black;
 }
