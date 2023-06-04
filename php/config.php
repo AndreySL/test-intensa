@@ -1,11 +1,15 @@
 <?php
-function connectDB()
-{
+require_once(dirname(__DIR__) . './vendor/autoload.php');
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__, 1));
+$dotenv->load();
+
+function connectDB() {
     return new mysqli(
-        '127.0.0.1:3306',
-        'root',
-        '',
-        'click'
+        $_ENV['HOST'],
+        $_ENV['USER_NAME'],
+        $_ENV['USER_PASSWORD'],
+        $_ENV['DB_NAME'],
     );
 }
+
 ?>

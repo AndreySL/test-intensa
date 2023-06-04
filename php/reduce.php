@@ -2,13 +2,12 @@
 session_start();
 
 require_once('./Reducer.php');
-require_once('./validate.php');
 
 $reducer = new Reducer();
 
 if (isset($_POST['url'])) {
     $originalUrl = $_POST['url'];
-    $isValidOriginalUrl = validateUrl($originalUrl);
+    $isValidOriginalUrl = filter_var($originalUrl, FILTER_VALIDATE_URL);
     if ($isValidOriginalUrl) {
         $code = $reducer->getUrlAndReturnCode($originalUrl);
         $_SESSION['success'] = $reducer->generateLink($code);

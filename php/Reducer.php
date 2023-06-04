@@ -9,7 +9,9 @@ class Reducer
     {
         $this->db = connectDB();
     }
-
+public function rts () {
+    echo dirname(__DIR__);
+}
     public function generateCode()
     {
         $chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -24,7 +26,7 @@ class Reducer
     public function getOriginalURL($code)
     {
         $row = $this->db->query("SELECT url FROM links WHERE code = '$code'");
-        if($row->num_rows) {
+        if ($row->num_rows) {
             return $row->fetch_object()->url;
         }
     }
